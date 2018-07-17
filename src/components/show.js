@@ -16,16 +16,5 @@ export default ({ state, setState, match, history }) => (
     <div>
       <Link to={`/${match.params.id}/edit`}>Edit</Link>
     </div>
-    <button
-      type="button"
-      onClick={() => {
-        if (confirm('Are you sure?')) {
-          setState({ colors: reject(equals(match.params.id), state.colors) })
-          history.push('/')
-        }
-      }}
-    >
-      remove
-    </button>
   </div>
 )
