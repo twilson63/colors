@@ -2,16 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { map } from 'ramda'
 
-const li = color => (
-  <li key={`${color}-${new Date().toISOString()}`}>
-    <Link to={`/${color}`}>{color}</Link>
-  </li>
-)
+/**
+ * Create a list page
+ * the page should provide a ul component an use map to map over state.colors
+ * to a li function
+ *
+ * Add a Link to the /new route
+ * Make each line item a link to the /:id route
+ */
 
-export default ({ state, setState }) => (
-  <div>
-    <h1>Colors</h1>
-    <Link to="/new">New Color</Link>
-    <ul>{map(li, state.colors)}</ul>
-  </div>
-)
+export default ({ state, setState }) => <div>TODO: List Colors</div>
