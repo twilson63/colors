@@ -6,15 +6,15 @@ import ColorForm from './components/form'
 import ColorShow from './components/show'
 
 const App = ({ state, setState }) => {
-  const StateRoute = ({ component: Component, ...rest }) => (
+  const StateRoute = ({ component: Component, path, exact }) => (
     <Route
-      {...rest}
+      path={path}
+      exact={exact}
       render={props => (
         <Component {...props} state={state} setState={setState} />
       )}
     />
   )
-
   return (
     <BrowserRouter>
       <Switch>
@@ -26,5 +26,4 @@ const App = ({ state, setState }) => {
     </BrowserRouter>
   )
 }
-
 export default App
